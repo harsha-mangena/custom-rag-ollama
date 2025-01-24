@@ -1,0 +1,333 @@
+2025-01-24 04:07:22,294 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:07:22,295 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:07:23,630 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:07:23,632 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:07:23,632 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:07:24,853 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:07:24,855 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:07:24,855 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:07:25,663 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:07:39,133 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,170 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,200 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,230 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,260 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,290 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,321 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,350 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,381 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,432 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,462 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,492 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:39,836 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,155 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,233 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,456 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,485 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,567 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,598 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,628 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,658 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,943 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:40,973 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:41,050 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:41,129 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:41,213 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:41,292 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:41,371 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:41,403 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:41,433 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:41,575 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:07:41,576 - utils.metrics - ERROR - Failed to get summary statistics: no such table: metrics
+2025-01-24 04:07:41,577 - data.database - ERROR - Failed to get document count: no such table: documents
+2025-01-24 04:08:07,055 - data.database - ERROR - Search failed: no such table: documents
+2025-01-24 04:08:07,056 - utils.metrics - ERROR - Failed to store query metrics: no such table: metrics
+2025-01-24 04:08:13,055 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,086 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,116 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,147 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,178 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,209 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,239 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,270 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,300 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,330 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,361 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,391 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,422 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,452 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,482 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,513 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,544 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,578 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,613 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,643 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,674 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,708 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,739 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,774 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,808 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,843 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,877 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,911 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,942 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,974 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:13,999 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:08:14,000 - utils.metrics - ERROR - Failed to get summary statistics: no such table: metrics
+2025-01-24 04:08:14,001 - data.database - ERROR - Failed to get document count: no such table: documents
+2025-01-24 04:09:00,736 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:00,767 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:00,798 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:00,828 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:00,858 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:00,890 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:00,921 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:00,951 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:00,981 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,012 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,042 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,073 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,104 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,133 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,164 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,195 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,225 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,260 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,291 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,321 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,351 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,386 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,417 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,451 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,486 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,520 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,554 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,589 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,623 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,654 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,680 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:01,681 - utils.metrics - ERROR - Failed to get summary statistics: no such table: metrics
+2025-01-24 04:09:01,681 - data.database - ERROR - Failed to get document count: no such table: documents
+2025-01-24 04:09:10,404 - data.database - ERROR - Search failed: no such table: documents
+2025-01-24 04:09:10,405 - utils.metrics - ERROR - Failed to store query metrics: no such table: metrics
+2025-01-24 04:09:11,453 - data.database - ERROR - Search failed: no such table: documents
+2025-01-24 04:09:11,454 - utils.metrics - ERROR - Failed to store query metrics: no such table: metrics
+2025-01-24 04:09:15,094 - data.database - ERROR - Search failed: no such table: documents
+2025-01-24 04:09:15,095 - utils.metrics - ERROR - Failed to store query metrics: no such table: metrics
+2025-01-24 04:09:26,280 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,310 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,341 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,372 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,402 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,433 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,464 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,494 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,525 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,555 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,585 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,616 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,647 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,676 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,706 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,738 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,768 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,803 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,837 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,867 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,897 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,932 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,963 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:26,997 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:27,031 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:27,066 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:27,100 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:27,135 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:27,165 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:27,196 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:27,227 - data.database - ERROR - Failed to store document: no such table: documents
+2025-01-24 04:09:27,229 - utils.metrics - ERROR - Failed to get summary statistics: no such table: metrics
+2025-01-24 04:09:27,229 - data.database - ERROR - Failed to get document count: no such table: documents
+2025-01-24 04:15:08,453 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:15:08,453 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:15:10,115 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:15:10,117 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:15:10,117 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:15:11,367 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:15:11,369 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:15:11,369 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:15:12,386 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:15:18,835 - data.database - INFO - Database tables created successfully
+2025-01-24 04:15:18,836 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:15:23,637 - core.rag - INFO - Processed 31/31 chunks for document: paper-1.pdf
+2025-01-24 04:15:23,639 - core.rag - ERROR - Failed to get storage stats: name 'aiosqlite' is not defined
+2025-01-24 04:16:35,772 - core.rag - INFO - Processed 31/31 chunks for document: paper-1.pdf
+2025-01-24 04:16:35,776 - core.rag - ERROR - Failed to get storage stats: name 'aiosqlite' is not defined
+2025-01-24 04:25:27,766 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:25:27,767 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:25:29,387 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:25:29,389 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:25:29,389 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:25:30,690 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:25:30,692 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:25:30,692 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:25:31,452 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:25:31,554 - data.database - INFO - Database tables created successfully
+2025-01-24 04:25:31,554 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:27:23,419 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:27:23,419 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:27:25,003 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:27:25,005 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:27:25,005 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:27:26,269 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:27:26,273 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:27:26,273 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:27:27,220 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:27:27,322 - data.database - INFO - Database tables created successfully
+2025-01-24 04:27:27,322 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:27:38,949 - core.rag - INFO - Processed 31/31 chunks for document: paper-1.pdf
+2025-01-24 04:32:09,984 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:32:09,985 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:32:11,576 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:32:11,582 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:32:11,582 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:32:12,865 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:32:12,866 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:32:12,866 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:32:13,620 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:32:13,721 - data.database - INFO - Database tables created successfully
+2025-01-24 04:32:13,721 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:32:51,717 - core.rag - INFO - Processed 31/31 chunks for document: paper-1.pdf
+2025-01-24 04:33:43,955 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:33:43,955 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:33:45,670 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:33:45,673 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:33:45,673 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:33:47,003 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:33:47,004 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:33:47,005 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:33:47,883 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:33:47,989 - data.database - INFO - Database tables created successfully
+2025-01-24 04:33:47,989 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:33:59,291 - core.rag - INFO - Processed 31/31 chunks for document: paper-1.pdf
+2025-01-24 04:34:14,572 - core.rag - ERROR - Query failed: name 'generate_response' is not defined
+2025-01-24 04:40:56,597 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:40:56,597 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:40:57,826 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:40:57,828 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:40:57,828 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:40:59,478 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:40:59,480 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:40:59,480 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:41:00,632 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:41:00,634 - data.database - INFO - Database tables created successfully
+2025-01-24 04:41:00,634 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:41:08,470 - core.rag - INFO - Processed 31/31 chunks from paper-1.pdf
+2025-01-24 04:43:11,406 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:43:31,599 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:43:31,600 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:43:32,834 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:43:32,836 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:43:32,836 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:43:34,095 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:43:34,098 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:43:34,098 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:43:35,623 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:43:35,624 - data.database - INFO - Database tables created successfully
+2025-01-24 04:43:35,624 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:43:42,270 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:46:23,375 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:46:23,376 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:46:24,930 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:46:24,932 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:46:24,932 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:46:26,199 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:46:26,201 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:46:26,201 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:46:27,011 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:46:27,121 - data.database - INFO - Database tables created successfully
+2025-01-24 04:46:27,121 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:46:42,183 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:48:51,097 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:49:38,658 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:49:38,658 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:49:40,788 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:49:40,792 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:49:40,792 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:49:41,963 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:49:41,963 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:49:42,070 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:49:42,072 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:49:42,072 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:49:42,968 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:49:43,078 - data.database - INFO - Database tables created successfully
+2025-01-24 04:49:43,078 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:49:43,232 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:49:43,234 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:49:43,234 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:49:44,536 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:49:44,538 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:49:44,538 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:49:45,495 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:49:45,497 - data.database - INFO - Database tables created successfully
+2025-01-24 04:49:45,497 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:50:01,621 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:50:35,619 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:50:52,567 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:51:18,868 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:51:28,139 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:51:29,202 - core.rag - INFO - Processed 3/3 chunks from Generic_Resume_Template.pdf
+2025-01-24 04:51:45,051 - core.rag - INFO - Processed 31/31 chunks from paper-1.pdf
+2025-01-24 04:52:08,123 - core.rag - INFO - Processed 31/31 chunks from paper-1.pdf
+2025-01-24 04:52:09,764 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:52:09,764 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:52:10,994 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:52:10,996 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:52:10,996 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:52:11,999 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:52:12,001 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:52:12,001 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:52:12,904 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:52:12,904 - data.database - INFO - Database tables created successfully
+2025-01-24 04:52:12,905 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:52:26,479 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:52:26,480 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 04:52:27,708 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 04:52:27,711 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:52:27,711 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 04:52:28,867 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 04:52:28,869 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 04:52:28,869 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 04:52:29,699 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 04:52:29,804 - data.database - INFO - Database tables created successfully
+2025-01-24 04:52:29,806 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 04:52:43,312 - core.rag - INFO - Processed 31/31 chunks from paper-1.pdf
+2025-01-24 04:58:24,821 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 04:58:24,822 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 04:58:24,822 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 04:58:24,823 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:24,824 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:24,827 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:39,682 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 04:58:39,683 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 04:58:39,683 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 04:58:39,685 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:39,706 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:39,733 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:39,765 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'codellama' not found"}
+2025-01-24 04:58:39,767 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:39,767 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'codellama' not found"}
+2025-01-24 04:58:39,768 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'codellama' not found"}
+2025-01-24 04:58:39,769 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:39,770 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:44,720 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 04:58:44,720 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 04:58:44,722 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:44,742 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 04:58:44,743 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:44,769 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:44,800 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'codellama' not found"}
+2025-01-24 04:58:44,802 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'codellama' not found"}
+2025-01-24 04:58:44,802 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:44,803 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'codellama' not found"}
+2025-01-24 04:58:44,804 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 04:58:44,805 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
