@@ -1,59 +1,108 @@
-Welcome to the Custom Retrieval-Augmented Generation (RAG) System, a comprehensive solution that combines document retrieval and large language models (LLMs) to deliver accurate, context-aware responses. This project integrates Ollama, a state-of-the-art LLM service, to provide advanced language capabilities.
+# Custom RAG System with Ollama
 
-Features
+A flexible Retrieval-Augmented Generation (RAG) system built with Ollama, designed for efficient document processing and contextual query responses.
 
-1. Document Processing & Chunking
+## Features
 
-Supports various file formats: PDFs, DOCX, Markdown, and plain text.
+- 📄 Multi-format document support (PDF, DOCX, Markdown, TXT)
+- 🔍 Advanced vector similarity search
+- 🤖 Integration with Ollama's language models
+- 📊 Built-in benchmarking capabilities
+- 🎯 High-precision context retrieval
 
-Processes documents into manageable chunks (default: 512 tokens) with configurable overlap.
+## Getting Started
 
-2. Embedding Generation
+### Prerequisites
 
-Utilizes embedding models like SentenceTransformer (local) or Hugging Face API.
+- Python 3.8+
+- Ollama installed and running
+- Required Python packages (specified in `requirements.txt`)
 
-Supports quantized models for optimized performance.
+### Installation
 
-3. Vector Search
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/custom-rag-ollama.git
 
-Implements vector similarity search using frameworks like FAISS.
-
-Retrieves the most relevant chunks for queries.
-
-4. Response Generation
-
-Leverages Ollama's LLMs to generate contextual responses based on retrieved chunks.
-
-Configurable prompts for flexible usage.
-
-5. Performance Monitoring
-
-Tracks key metrics such as embedding time, search time, and total query time.
-
-Installation
-
-Clone the Repository:
-
-git clone https://github.com/harsha-mangena/custom-rag-ollama.git
+# Navigate to project directory
 cd custom-rag-ollama
 
-Set Up a Virtual Environment:
-
-python3 -m venv venv
-source venv/bin/activate
-
-Install Dependencies:
-
+# Install dependencies
 pip install -r requirements.txt
+```
 
-Configure Environment Variables:
+## Usage
 
-Create a .env file:
+### 1. Document Upload
 
-HF_API_TOKEN=<your_huggingface_api_token>
-DATABASE_PATH=./data/rag.db
+- Access the Document Upload section in the UI
+- Supported file formats:
+  - PDF
+  - DOCX
+  - Markdown
+  - Plain text
+- Documents are automatically processed and chunked for optimal retrieval
 
-Start the Application:
+### 2. Query Interface
 
-python app.py
+- Navigate to the Query tab
+- Input your question
+- Configure parameters:
+  - Number of results to retrieve
+  - Ollama model selection
+- View results with:
+  - Generated response
+  - Source document metadata
+  - Similarity scores
 
+### 3. Benchmarking
+
+Run performance tests to evaluate:
+- Embedding generation speed
+- Search efficiency
+- Model response quality
+- Overall system performance
+
+## System Architecture
+
+### Core Components
+
+1. **Document Processing Pipeline**
+   - Text extraction from multiple formats
+   - Intelligent document chunking
+   - Metadata preservation
+
+2. **Embedding Engine**
+   - Vector embedding generation
+   - Optimization for search performance
+   - Model-agnostic design
+
+3. **Vector Search System**
+   - High-performance similarity matching
+   - Configurable search parameters
+   - Result ranking optimization
+
+4. **Response Generation**
+   - Integration with Ollama LLMs
+   - Context-aware response synthesis
+   - Source attribution
+
+## Contributing
+
+We welcome contributions! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Ollama team for their excellent LLM framework
+- Contributors and community members
+
+## Contact
+
+For questions and support, please open an issue in the GitHub repository.
+
+---
+Made with ❤️ by [Your Name/Organization]
