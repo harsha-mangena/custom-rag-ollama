@@ -281,3 +281,24 @@ class DatabaseManager:
         except Exception as e:
             self.logger.error(f"Failed to get embedding model distribution: {e}")
             return {}
+    
+
+    async def clear_memory(self) -> bool:
+        """Clear all documents from the database."""
+        try:
+            if not self._initialized:
+                await self.initialize()
+
+            async with aiosqlite.connect(self.db_path) as db:
+                # Clear documents table
+                await db.execute("DELETE FROM documents")
+                # Clear metrics table
+                await db.execute("DELETE FROM metrics")
+                await db.commit()
+                
+            self.logger.info("Successfully cleared all documents from memory")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to clear memory: {e}")
+            return False

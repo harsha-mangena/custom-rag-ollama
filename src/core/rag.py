@@ -337,6 +337,169 @@ class EnhancedRAG:
             self.logger.error(f"Failed to get document statistics: {e}")
             raise
 
+    async def clear_memory(self) -> bool:
+        """
+        Clear all documents and related data from memory.
+        This will remove all uploaded documents and their embeddings.
+        """
+        try:
+            if not self._initialized:
+                await self.initialize()
+
+            # Clear database
+            cleared = await self.db.clear_memory()
+            if not cleared:
+                raise Exception("Failed to clear database")
+
+            # Reset document mapper
+            self.document_mapper = DocumentMapper()
+
+            # Clear any cached data
+            if hasattr(self, '_cached_embeddings'):
+                self._cached_embeddings = {}
+
+            self.logger.info("Successfully cleared system memory")
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Failed to clear memory: {e}")
+            return False
+
+    async def get_memory_status(self) -> Dict[str, Any]:
+        """Get current memory usage statistics."""
+        try:
+            if not self._initialized:
+                await self.initialize()
+
+            stats = await self.get_document_statistics()
+            status = {
+                "documents_loaded": stats["total_documents"] > 0,
+                "total_documents": stats["total_documents"],
+                "total_chunks": stats["total_chunks"],
+                "file_types": stats["file_types"],
+                "last_update": stats["last_update"]
+            }
+            return status
+
+        except Exception as e:
+            self.logger.error(f"Failed to get memory status: {e}")
+            return {
+                "documents_loaded": False,
+                "error": str(e)
+            }
+
+    # Add this method to your EnhancedRAG class in rag.py
+
+    async def run_benchmark(
+        self,
+        queries: List[str],
+        llm_models: List[str],
+        n_results: int = 5,
+        similarity_threshold: float = 0.5,
+        concurrent_requests: int = 3
+    ) -> pd.DataFrame:
+        """
+        Run benchmarking tests across multiple queries and models.
+        
+        Args:
+            queries: List of test queries
+            llm_models: List of LLM models to test
+            n_results: Number of results per query
+            similarity_threshold: Minimum similarity score
+            concurrent_requests: Number of concurrent requests
+            
+        Returns:
+            DataFrame with benchmark results
+        """
+        try:
+            if not self._initialized:
+                await self.initialize()
+
+            results = []
+            semaphore = asyncio.Semaphore(concurrent_requests)
+            
+            async def process_query(model: str, query: str):
+                async with semaphore:
+                    start_time = datetime.now()
+                    try:
+                        # Run query with web search
+                        response, metrics = await self.optimized_query(
+                            query_text=query,
+                            n_results=n_results,
+                            ollama_model=model,
+                            has_documents=await self.db.get_document_count() > 0
+                        )
+                        
+                        # Prepare result data
+                        result = {
+                            "model": model,
+                            "query": query,
+                            "search_time": metrics.get("search_time", 0),
+                            "embedding_time": metrics.get("embedding_time", 0),
+                            "llm_time": metrics.get("llm_time", 0),
+                            "web_time": metrics.get("web_time", 0),
+                            "total_time": metrics.get("total_time", 0),
+                            "has_local_results": metrics.get("has_local_results", False),
+                            "has_web_results": metrics.get("has_web_results", False),
+                            "response_length": len(response) if response else 0,
+                            "timestamp": datetime.now().isoformat()
+                        }
+                        
+                        results.append(result)
+                        
+                        # Store benchmark result
+                        await self.metrics.store_benchmark_result(
+                            model_name=model,
+                            metrics=result
+                        )
+                        
+                    except Exception as e:
+                        self.logger.error(f"Query processing failed: {e}")
+                        results.append({
+                            "model": model,
+                            "query": query,
+                            "error": str(e),
+                            "total_time": (datetime.now() - start_time).total_seconds(),
+                            "timestamp": datetime.now().isoformat()
+                        })
+
+            # Create tasks for all combinations
+            tasks = [
+                process_query(model, query)
+                for model in llm_models
+                for query in queries
+            ]
+            
+            # Run all tasks concurrently
+            await asyncio.gather(*tasks)
+            
+            # Convert results to DataFrame
+            df = pd.DataFrame(results)
+            
+            # Add summary statistics
+            if not df.empty:
+                summary_stats = {
+                    "total_queries": len(queries),
+                    "total_models": len(llm_models),
+                    "avg_response_time": df["total_time"].mean(),
+                    "max_response_time": df["total_time"].max(),
+                    "min_response_time": df["total_time"].min(),
+                    "successful_queries": len(df[df["error"].isna()]),
+                    "failed_queries": len(df[df["error"].notna()])
+                }
+                
+                # Store summary statistics
+                await self.metrics.store_benchmark_summary(summary_stats)
+                
+                # Log summary
+                self.logger.info(f"Benchmark completed: {summary_stats}")
+            
+            return df
+
+        except Exception as e:
+            self.logger.error(f"Benchmark failed: {e}")
+            raise
+
     async def cleanup(self):
         """Cleanup resources."""
         try:

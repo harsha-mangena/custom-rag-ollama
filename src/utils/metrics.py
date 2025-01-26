@@ -110,3 +110,81 @@ class MetricsCollector:
         except Exception as e:
             self.logger.error(f"Failed to get summary statistics: {e}")
             return {}
+
+    async def store_benchmark_result(
+        self,
+        model_name: str,
+        metrics: Dict[str, Any]
+    ) -> None:
+        """Store individual benchmark result."""
+        try:
+            data = {
+                "model_name": model_name,
+                "timestamp": datetime.now().isoformat(),
+                **metrics
+            }
+            
+            async with aiosqlite.connect(self.db_path) as db:
+                await db.execute(
+                    """
+                    INSERT INTO metrics (type, data)
+                    VALUES (?, ?)
+                    """,
+                    ("benchmark", json.dumps(data))
+                )
+                await db.commit()
+            
+        except Exception as e:
+            self.logger.error(f"Failed to store benchmark result: {e}")
+
+    async def store_benchmark_summary(
+        self,
+        summary: Dict[str, Any]
+    ) -> None:
+        """Store benchmark summary statistics."""
+        try:
+            data = {
+                "timestamp": datetime.now().isoformat(),
+                **summary
+            }
+            
+            async with aiosqlite.connect(self.db_path) as db:
+                await db.execute(
+                    """
+                    INSERT INTO metrics (type, data)
+                    VALUES (?, ?)
+                    """,
+                    ("benchmark_summary", json.dumps(data))
+                )
+                await db.commit()
+                
+        except Exception as e:
+            self.logger.error(f"Failed to store benchmark summary: {e}")
+
+    async def get_benchmark_history(
+        self,
+        limit: int = 100
+    ) -> List[Dict[str, Any]]:
+        """Get recent benchmark results."""
+        try:
+            async with aiosqlite.connect(self.db_path) as db:
+                async with db.execute(
+                    """
+                    SELECT data FROM metrics 
+                    WHERE type IN ('benchmark', 'benchmark_summary')
+                    ORDER BY timestamp DESC
+                    LIMIT ?
+                    """,
+                    (limit,)
+                ) as cursor:
+                    results = []
+                    async for row in cursor:
+                        try:
+                            results.append(json.loads(row[0]))
+                        except json.JSONDecodeError:
+                            continue
+                    return results
+                    
+        except Exception as e:
+            self.logger.error(f"Failed to get benchmark history: {e}")
+            return []

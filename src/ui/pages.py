@@ -13,6 +13,34 @@ class Pages:
     async def document_processing_page(rag_system: EnhancedRAG):
         st.header("Document Processing")
         
+        # Memory Management Section
+        with st.expander("Memory Management", expanded=False):
+            col1, col2 = st.columns([2, 1])
+            
+            with col1:
+                # Display current memory status
+                status = await rag_system.get_memory_status()
+                if status["documents_loaded"]:
+                    st.info(f"""
+                        Currently loaded:
+                        - Documents: {status['total_documents']}
+                        - Total chunks: {status['total_chunks']}
+                        - File types: {', '.join(status['file_types'].keys())}
+                        - Last update: {status['last_update']}
+                    """)
+                else:
+                    st.info("No documents currently loaded in memory")
+            
+            with col2:
+                if st.button("Clear Memory", type="secondary", help="Remove all uploaded documents from memory"):
+                    with st.spinner("Clearing memory..."):
+                        if await rag_system.clear_memory():
+                            st.success("Memory cleared successfully!")
+                        else:
+                            st.error("Failed to clear memory")
+        
+        st.markdown("---")
+        
         # File upload section
         uploaded_files = st.file_uploader(
             "Upload Documents",
@@ -67,7 +95,7 @@ class Pages:
                     progress_bar.progress((idx + 1) / len(uploaded_files))
                 
                 status_text.text("Processing complete!")
-
+    
     @staticmethod
     async def query_interface_page(rag_system: EnhancedRAG):
         st.header("Query Interface")

@@ -232,3 +232,127 @@
 2025-01-26 11:37:23,466 - core.rag - INFO - Mind map updated and saved to /Users/venom/Work/custom-rag-ollama/mindmaps/mind_map_20250126_113723.png
 2025-01-26 11:37:23,467 - core.rag - INFO - Processed 20/20 chunks from EJ1172284.pdf
 2025-01-26 11:37:36,162 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=explain+this+document+Knapp+Beyond+Mobile&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 12:33:47,264 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 12:33:47,265 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 12:33:49,190 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 12:33:49,192 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 12:33:49,193 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 12:33:50,781 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 12:33:50,782 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 12:33:50,782 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 12:33:51,944 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 12:33:52,052 - data.database - INFO - Database tables created successfully
+2025-01-26 12:33:52,052 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 12:34:21,793 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=tell+me+news+about+clemson+2024+scam%0A+Also+The+Burston&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 12:35:51,428 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=tell+me+news+after+trump+losing+2024+elections%0A%0A%0A&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 12:36:13,852 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=tell+me+news+after+kamala+losing+2024+elections%0A%0A%0A+Educational+Technology+Polish+J&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 12:36:57,192 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=Tell+me+about+CES+expo+AI+things+to+look+out%0A+Learner+The+Byrne&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 13:09:59,994 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 13:09:59,995 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 13:10:01,502 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 13:10:01,504 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 13:10:01,504 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 13:10:02,900 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 13:10:02,901 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 13:10:02,902 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 13:10:03,792 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 13:10:03,894 - data.database - INFO - Database tables created successfully
+2025-01-26 13:10:03,894 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 13:10:07,138 - data.database - INFO - Successfully cleared all documents from memory
+2025-01-26 13:10:07,139 - core.rag - INFO - Successfully cleared system memory
+2025-01-26 13:10:19,438 - core.rag - INFO - Mind map updated and saved to /Users/venom/Work/custom-rag-ollama/mindmaps/mind_map_20250126_131019.png
+2025-01-26 13:10:19,438 - core.rag - INFO - Processed 20/20 chunks from EJ1172284.pdf
+2025-01-26 13:10:33,982 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=what+is+the+document+about+White+Has+Distributed&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 13:11:47,667 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=what+is+the+document+about+White+Has+Distributed&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 13:12:59,718 - data.database - INFO - Successfully cleared all documents from memory
+2025-01-26 13:12:59,719 - core.rag - INFO - Successfully cleared system memory
+2025-01-26 13:13:04,799 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 13:13:04,800 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 13:13:06,371 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 13:13:06,373 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 13:13:06,373 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 13:13:07,681 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 13:13:07,683 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 13:13:07,683 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 13:13:08,655 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 13:13:08,656 - data.database - INFO - Database tables created successfully
+2025-01-26 13:13:08,656 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 13:13:27,860 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=News+about+india+in+2025+januanry+completely%0A&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 13:14:32,413 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=usa+2025+news%0A&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 13:19:36,127 - utils.search_utils - ERROR - Error performing web search: Cannot connect to host api.duckduckgo.com:443 ssl:default [nodename nor servname provided, or not known]
+2025-01-26 13:19:36,129 - utils.search_utils - ERROR - Fallback search failed: Cannot connect to host html.duckduckgo.com:443 ssl:default [nodename nor servname provided, or not known]
+2025-01-26 13:20:52,464 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 13:20:52,464 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 13:21:05,508 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 13:21:05,511 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 13:21:05,511 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 13:21:08,345 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 13:21:08,348 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 13:21:08,348 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 13:21:10,030 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 13:21:10,031 - data.database - INFO - Database tables created successfully
+2025-01-26 13:21:10,032 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 13:21:29,632 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=clemson+scam+2024&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 15:59:24,922 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=clemson+scam+2024&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:11:23,746 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 16:11:23,746 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 16:11:25,580 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 16:11:25,582 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 16:11:25,582 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 16:11:27,573 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 16:11:27,576 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 16:11:27,576 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 16:11:28,391 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 16:11:28,392 - data.database - INFO - Database tables created successfully
+2025-01-26 16:11:28,393 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 16:12:39,568 - data.database - INFO - Successfully cleared all documents from memory
+2025-01-26 16:12:39,569 - core.rag - INFO - Successfully cleared system memory
+2025-01-26 16:16:37,929 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=who+own+IPL+2024+with+score+board+please&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:17:51,850 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=who+won+IPL+2024+with+score+board+please&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:18:09,766 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=who+won+IPL+2024+with+score+board+please&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:19:03,268 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=who+won+IPL+2024+with+score+board+please&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:23:05,533 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 16:23:05,534 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 16:23:07,530 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 16:23:07,532 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 16:23:07,532 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 16:23:09,260 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 16:23:09,262 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 16:23:09,262 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 16:23:11,364 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 16:23:11,365 - data.database - INFO - Database tables created successfully
+2025-01-26 16:23:11,365 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 16:23:57,629 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=what+is+the+document+about&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:26:20,264 - core.rag - INFO - Mind map updated and saved to /Users/venom/Work/custom-rag-ollama/mindmaps/mind_map_20250126_162620.png
+2025-01-26 16:26:20,264 - core.rag - INFO - Processed 31/31 chunks from paper-1.pdf
+2025-01-26 16:26:26,150 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=what+is+the+document+about+Step+Prompt+Hendrycks&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:27:41,563 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=+Discussion+Kbased+RL&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:27:41,564 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=+Discussion+Kbased+RL&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:27:41,565 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=+Discussion+Kbased+RL&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:29:36,452 - core.rag - ERROR - Benchmark failed: 'error'
+2025-01-26 16:30:50,455 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 16:30:50,456 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 16:30:52,202 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 16:30:52,204 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 16:30:52,204 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 16:30:53,506 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 16:30:53,508 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 16:30:53,508 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 16:30:54,471 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 16:30:54,581 - data.database - INFO - Database tables created successfully
+2025-01-26 16:30:54,581 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 16:31:42,487 - core.rag - INFO - Mind map updated and saved to /Users/venom/Work/custom-rag-ollama/mindmaps/mind_map_20250126_163142.png
+2025-01-26 16:31:42,487 - core.rag - INFO - Processed 31/31 chunks from paper-1.pdf
+2025-01-26 16:32:04,007 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=what+is+the+document+about+Query+Expansion+English+Knowledge+Base+Size&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:32:04,010 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=what+is+the+document+about+Query+Expansion+English+Knowledge+Base+Size&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:32:04,032 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=what+is+the+document+about+Query+Expansion+English+Knowledge+Base+Size&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 16:33:04,959 - core.rag - ERROR - Benchmark failed: 'error'
+2025-01-26 16:33:52,364 - utils.search_utils - ERROR - Search failed: 202
+2025-01-26 16:34:35,021 - utils.search_utils - ERROR - Search failed: 202
+2025-01-26 16:34:54,859 - utils.search_utils - ERROR - Search failed: 202
+2025-01-26 16:36:15,427 - utils.search_utils - ERROR - Search failed: 202
+2025-01-26 16:37:04,299 - utils.search_utils - ERROR - Search failed: 202
+2025-01-26 16:37:36,497 - data.database - INFO - Successfully cleared all documents from memory
+2025-01-26 16:37:36,498 - core.rag - INFO - Successfully cleared system memory
+2025-01-26 16:37:45,576 - data.database - INFO - Successfully cleared all documents from memory
+2025-01-26 16:37:45,576 - core.rag - INFO - Successfully cleared system memory
