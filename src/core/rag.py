@@ -1,3 +1,5 @@
+# src/core/rag.py
+
 import logging
 import asyncio
 import aiohttp
@@ -6,6 +8,7 @@ import json
 from typing import List, Dict, Any, Tuple, Optional, Callable
 from datetime import datetime
 import pandas as pd
+from pathlib import Path
 
 from config.settings import Settings
 from core.document import Document
@@ -14,12 +17,15 @@ from data.database import DatabaseManager
 from utils.file_processing import FileProcessor
 from utils.metrics import MetricsCollector
 from utils.ollama_utils import generate_response
+from utils.search_utils import WebSearchManager
+from utils.document_mapper import DocumentMapper
 
 class EnhancedRAG:
-    """Enhanced RAG (Retrieval Augmented Generation) system implementation."""
+    """Enhanced RAG system with web search and document mapping capabilities."""
     
     def __init__(
         self,
+        *,  # Force keyword arguments
         hf_token: Optional[str] = None,
         embedding_model: str = Settings.DEFAULT_EMBEDDING_MODEL,
         chunk_size: int = Settings.CHUNK_SIZE,
@@ -42,11 +48,15 @@ class EnhancedRAG:
         self.embedding_model = embedding_model
         self._initialized = False
         
-        # Initialize components
+        # Initialize core components
         self.db = DatabaseManager(db_path)
         self.embedding_manager = EmbeddingManager(hf_token)
         self.file_processor = FileProcessor(chunk_size, chunk_overlap)
         self.metrics = MetricsCollector(db_path)
+        
+        # Initialize enhanced components
+        self.search_manager = WebSearchManager()
+        self.document_mapper = DocumentMapper()
 
     async def initialize(self):
         """Initialize system components."""
@@ -133,7 +143,9 @@ class EnhancedRAG:
                     self.logger.error(f"Error processing chunk {i} of {filename}: {e}")
                     continue
 
-            # Log results
+            # Update mind map
+            await self.update_document_mind_map()
+            
             self.logger.info(
                 f"Processed {successful_chunks}/{total_chunks} chunks "
                 f"from {filename}"
@@ -145,230 +157,184 @@ class EnhancedRAG:
             self.logger.error(f"Document processing failed for {filename}: {e}")
             return False
 
-    async def query(
+    async def optimized_query(
         self,
         query_text: str,
         n_results: int = 5,
-        similarity_threshold: float = 0.5,
-        ollama_model: Optional[str] = None
-    ) -> Tuple[List[Dict[str, Any]], Dict[str, float], Optional[str]]:
+        ollama_model: Optional[str] = None,
+        has_documents: bool = False
+    ) -> Tuple[str, Dict[str, float]]:
         """
-        Query the RAG system.
-        
-        Args:
-            query_text: Query string
-            n_results: Number of results to return
-            similarity_threshold: Minimum similarity score
-            ollama_model: Optional Ollama model for response generation
-            
-        Returns:
-            Tuple containing:
-            - List of results
-            - Dictionary of metrics
-            - Generated response (if model specified)
+        Optimized query processing with support for both documents and web search.
         """
         try:
-            if not self._initialized:
-                await self.initialize()
-
-            metrics = {}
             start_time = datetime.now()
+            metrics = {}
+            
+            # Get local results first if documents exist
+            local_results = []
+            if has_documents:
+                try:
+                    embed_start = datetime.now()
+                    embedding, _ = await self.embedding_manager.get_embedding(
+                        query_text,
+                        self.embedding_model
+                    )
+                    metrics["embedding_time"] = (datetime.now() - embed_start).total_seconds()
+                    
+                    search_start = datetime.now()
+                    results = await self.db.search_similar_documents(
+                        query_embedding=embedding,
+                        embedding_model=self.embedding_model,
+                        n_results=n_results
+                    )
+                    metrics["search_time"] = (datetime.now() - search_start).total_seconds()
+                    
+                    local_results = [
+                        {
+                            "content": doc.content,
+                            "source": doc.source,
+                            "similarity": score,
+                            "metadata": doc.metadata
+                        }
+                        for doc, score in results
+                    ]
+                except Exception as e:
+                    self.logger.error(f"Error getting local results: {e}")
 
-            # Generate query embedding
-            query_embedding, embed_time = await self.embedding_manager.get_embedding(
-                query_text,
-                self.embedding_model
+            # Get web results with local context if available
+            web_start = datetime.now()
+            web_results = await self.search_manager.search_with_context(
+                query=query_text,
+                documents=local_results if local_results else None,
+                max_results=n_results
             )
-            metrics["embedding_time"] = embed_time
+            metrics["web_time"] = (datetime.now() - web_start).total_seconds()
 
-            # Search documents
-            search_start = datetime.now()
-            results = await self.db.search_similar_documents(
-                query_embedding,
-                self.embedding_model,
-                n_results,
-                similarity_threshold
-            )
-            metrics["search_time"] = (datetime.now() - search_start).total_seconds()
+            # Prepare reference context
+            refs = []
+            context_parts = []
 
-            # Format results
-            formatted_results = []
-            for doc, similarity in results:
-                excerpt = self._extract_relevant_excerpt(doc.content, query_text)
-                formatted_results.append({
-                    "content": doc.content,
-                    "source": doc.source,
-                    "similarity": similarity,
-                    "metadata": doc.metadata,
-                    "highlight": excerpt
-                })
+            # Add local document references
+            if local_results:
+                refs.extend([
+                    f"[L{i+1}] {r['source']}" 
+                    for i, r in enumerate(local_results)
+                ])
+                context_parts.extend([
+                    f"[L{i+1}] (Similarity: {r['similarity']:.2f}): {r['content'][:200]}..."
+                    for i, r in enumerate(local_results)
+                ])
 
-            # Generate response if model specified
-            response = None
-            if ollama_model and formatted_results:
+            # Add web references
+            if web_results:
+                refs.extend([
+                    f"[W{i+1}] {r['title']} ({r['url']})" 
+                    for i, r in enumerate(web_results)
+                ])
+                context_parts.extend([
+                    f"[W{i+1}]: {r['snippet']}"
+                    for i, r in enumerate(web_results)
+                ])
+
+            if not context_parts:
+                return "No relevant information found from either documents or web search.", metrics
+
+            # Create prompt with both local and web context
+            prompt = f"""Question: {query_text}
+
+    Context:
+    {chr(10).join(context_parts)}
+
+    Please provide a clear and concise answer based on the available information. 
+    When citing sources, use:
+    - [L#] for information from uploaded documents
+    - [W#] for information from web sources
+
+    If information comes from multiple sources, cite all relevant references."""
+
+            # Generate response
+            if ollama_model:
                 llm_start = datetime.now()
-                
-                # Prepare context
-                context = self._format_context(formatted_results)
-                
-                # Generate response
                 response = await generate_response(
                     model=ollama_model,
-                    prompt=self._create_prompt(query_text, context),
-                    system_prompt=self._get_system_prompt()
+                    prompt=prompt,
+                    system_prompt=self._get_optimized_system_prompt()
                 )
-                
-                if response:
-                    metrics["llm_time"] = (datetime.now() - llm_start).total_seconds()
+                metrics["llm_time"] = (datetime.now() - llm_start).total_seconds()
+            else:
+                response = "No LLM model specified for response generation."
 
-            # Calculate total time
+            # Add references footer
+            if refs:
+                response += "\n\nReferences:\n" + "\n".join(refs)
+
             metrics["total_time"] = (datetime.now() - start_time).total_seconds()
-
-            # Store metrics
-            await self.metrics.store_query_metrics(
-                query_text=query_text,
-                embedding_model=self.embedding_model,
-                n_results=n_results,
-                similarity_threshold=similarity_threshold,
-                metrics=metrics,
-                result_count=len(formatted_results)
-            )
-
-            return formatted_results, metrics, response
+            return response, metrics
 
         except Exception as e:
             self.logger.error(f"Query failed: {e}")
             raise
 
-    def _extract_relevant_excerpt(
-        self,
-        text: str,
-        query: str,
-        context_words: int = 50
-    ) -> str:
-        """Extract relevant excerpt from text."""
-        words = text.split()
-        query_words = set(query.lower().split())
-        
-        if len(words) <= context_words:
-            return text
+    def _get_optimized_system_prompt(self) -> str:
+        """Get optimized system prompt for response generation."""
+        return """You are a helpful assistant that provides accurate answers based on the given context.
+
+    Your task is to:
+    1. Analyze both uploaded documents and web search results
+    2. Synthesize information from all available sources
+    3. Provide clear, concise answers with proper source citations
+    4. Use [L#] for local documents and [W#] for web sources
+    5. Compare and contrast information when sources differ
+    6. Clearly state if information is incomplete or uncertain
+
+    Focus on accuracy and maintain a professional tone."""
+
+    async def update_document_mind_map(self):
+        """Update document mind map with current documents."""
+        try:
+            # Get all documents
+            all_docs = await self.db.get_all_documents()
             
-        best_score = 0
-        best_start = 0
-        
-        for i in range(len(words) - context_words):
-            excerpt = words[i:i + context_words]
-            score = sum(1 for word in excerpt if word.lower() in query_words)
-            if score > best_score:
-                best_score = score
-                best_start = i
-        
-        excerpt_start = max(0, best_start - context_words//2)
-        excerpt_end = min(len(words), best_start + context_words * 2)
-        
-        return " ".join(words[excerpt_start:excerpt_end])
-
-    def _format_context(self, results: List[Dict[str, Any]]) -> str:
-        """Format results into context string."""
-        return "\n\n".join(
-            f"[Source: {r['source']}]\n{r['content']}"
-            for r in results
-        )
-
-    def _create_prompt(self, query: str, context: str) -> str:
-        """Create prompt for LLM."""
-        return f"""Based on the following context, please answer the question. 
-        If the context doesn't contain enough information, please say so.
-
-Context:
-{context}
-
-Question: {query}
-
-Answer:"""
-
-    def _get_system_prompt(self) -> str:
-        """Get system prompt for LLM."""
-        return """You are a helpful AI assistant that provides accurate answers 
-        based on the given context. If the context doesn't contain enough 
-        information to answer the question, clearly state that. Always maintain
-        a professional and informative tone."""
-
-    async def run_benchmark(
-        self,
-        queries: List[str],
-        llm_models: List[str],
-        n_results: int = 5,
-        similarity_threshold: float = 0.5,
-        concurrent_requests: int = 3
-    ) -> pd.DataFrame:
-        """
-        Run benchmarking tests.
-        
-        Args:
-            queries: List of test queries
-            llm_models: List of LLM models to test
-            n_results: Number of results per query
-            similarity_threshold: Minimum similarity score
-            concurrent_requests: Number of concurrent requests
+            # Create mind map
+            graph = self.document_mapper.create_mind_map(
+                all_docs,
+                similarity_threshold=Settings.SIMILARITY_THRESHOLD
+            )
             
-        Returns:
-            DataFrame with benchmark results
-        """
+            # Generate visualization
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            output_path = Settings.MINDMAP_OUTPUT_DIR / f"mind_map_{timestamp}.png"
+            
+            self.document_mapper.visualize_mind_map(str(output_path))
+            
+            self.logger.info(f"Mind map updated and saved to {output_path}")
+            
+            return output_path
+            
+        except Exception as e:
+            self.logger.error(f"Failed to update mind map: {e}")
+            raise
+
+    async def get_document_statistics(self) -> Dict[str, Any]:
+        """Get statistics about processed documents."""
         try:
             if not self._initialized:
                 await self.initialize()
-
-            results = []
-            semaphore = asyncio.Semaphore(concurrent_requests)
+                
+            stats = {
+                "total_documents": await self.db.get_document_count(),
+                "file_types": await self.db.get_file_type_distribution(),
+                "avg_chunk_size": await self.db.get_average_chunk_size(),
+                "total_chunks": await self.db.get_total_chunks(),
+                "embedding_models": await self.db.get_embedding_model_distribution(),
+                "last_update": datetime.now().isoformat()
+            }
             
-            async def process_query(model: str, query: str):
-                async with semaphore:
-                    start_time = datetime.now()
-                    
-                    # Run query
-                    query_results, metrics, response = await self.query(
-                        query_text=query,
-                        n_results=n_results,
-                        similarity_threshold=similarity_threshold,
-                        ollama_model=model
-                    )
-                    
-                    if query_results:
-                        # Calculate metrics
-                        result = {
-                            "model_name": model,
-                            "query": query,
-                            "query_time": metrics["search_time"],
-                            "embedding_time": metrics["embedding_time"],
-                            "response_time": metrics.get("llm_time", 0),
-                            "total_time": (datetime.now() - start_time).total_seconds(),
-                            "retrieval_count": len(query_results),
-                            "avg_similarity": np.mean([r["similarity"] for r in query_results])
-                        }
-                        
-                        results.append(result)
-                        
-                        # Store result
-                        await self.metrics.store_benchmark_result(
-                            model_name=model,
-                            metrics=result
-                        )
-
-            # Create tasks
-            tasks = [
-                process_query(model, query)
-                for model in llm_models
-                for query in queries
-            ]
+            return stats
             
-            # Run concurrently
-            await asyncio.gather(*tasks)
-            
-            return pd.DataFrame(results)
-
         except Exception as e:
-            self.logger.error(f"Benchmark failed: {e}")
+            self.logger.error(f"Failed to get document statistics: {e}")
             raise
 
     async def cleanup(self):

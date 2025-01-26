@@ -36,3 +36,27 @@ class Settings:
         """Create necessary directories if they don't exist."""
         cls.LOG_DIR.mkdir(exist_ok=True)
         cls.DATA_DIR.mkdir(exist_ok=True)
+
+    SEARXNG_URL = "http://localhost:8888"
+    SEARCH_RESULTS_LIMIT = 10
+    SEARCH_CATEGORIES = ["general", "science", "tech"]
+    
+    # Mind Map Settings
+    SIMILARITY_THRESHOLD = 0.5
+    MINDMAP_OUTPUT_DIR = BASE_DIR / "mindmaps"
+    
+    # Model Training Settings
+    MODEL_OUTPUT_DIR = BASE_DIR / "trained_models"
+    BASE_MODEL_NAME = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+    TRAINING_EPOCHS = 3
+    BATCH_SIZE = 4
+    LEARNING_RATE = 2e-5
+
+    SEARXNG_INSTANCES = [
+        "https://searx.be",
+        "https://searx.fmac.xyz",
+        "https://searx.tiekoetter.com",
+        "https://searx.lyxx.ca",
+        "https://searx.nicfab.eu"
+    ]
+    SEARXNG_TIMEOUT = 10

@@ -163,3 +163,121 @@ class DatabaseManager:
     async def close(self):
         """Close database connection."""
         self._initialized = False
+
+    async def get_all_documents(self) -> List[Dict[str, Any]]:
+        """Retrieve all documents from the database."""
+        try:
+            if not self._initialized:
+                await self.initialize()
+
+            documents = []
+            async with aiosqlite.connect(self.db_path) as db:
+                async with db.execute(
+                    """
+                    SELECT content, source, file_type, metadata, embedding
+                    FROM documents
+                    """
+                ) as cursor:
+                    async for row in cursor:
+                        content, source, file_type, metadata_str, embedding_bytes = row
+                        
+                        try:
+                            metadata = json.loads(metadata_str) if metadata_str else {}
+                        except json.JSONDecodeError:
+                            metadata = {}
+                        
+                        doc = {
+                            "content": content,
+                            "source": source,
+                            "file_type": file_type,
+                            "metadata": metadata
+                        }
+                        
+                        if embedding_bytes:
+                            try:
+                                doc["embedding"] = np.frombuffer(
+                                    embedding_bytes,
+                                    dtype=np.float32
+                                )
+                            except Exception as e:
+                                self.logger.warning(
+                                    f"Failed to convert embedding for {source}: {e}"
+                                )
+                        
+                        documents.append(doc)
+            
+            return documents
+            
+        except Exception as e:
+            self.logger.error(f"Failed to retrieve documents: {e}")
+            raise
+
+    async def get_file_type_distribution(self) -> Dict[str, int]:
+        """Get distribution of file types in the database."""
+        try:
+            distribution = {}
+            async with aiosqlite.connect(self.db_path) as db:
+                async with db.execute(
+                    """
+                    SELECT file_type, COUNT(*) as count
+                    FROM documents
+                    GROUP BY file_type
+                    """
+                ) as cursor:
+                    async for row in cursor:
+                        file_type, count = row
+                        distribution[file_type] = count
+            return distribution
+        except Exception as e:
+            self.logger.error(f"Failed to get file type distribution: {e}")
+            return {}
+
+    async def get_average_chunk_size(self) -> float:
+        """Get average chunk size of documents."""
+        try:
+            async with aiosqlite.connect(self.db_path) as db:
+                async with db.execute(
+                    """
+                    SELECT AVG(LENGTH(content)) as avg_size
+                    FROM documents
+                    """
+                ) as cursor:
+                    row = await cursor.fetchone()
+                    return float(row[0]) if row and row[0] else 0.0
+        except Exception as e:
+            self.logger.error(f"Failed to get average chunk size: {e}")
+            return 0.0
+
+    async def get_total_chunks(self) -> int:
+        """Get total number of chunks in the database."""
+        try:
+            async with aiosqlite.connect(self.db_path) as db:
+                async with db.execute(
+                    "SELECT COUNT(*) FROM documents"
+                ) as cursor:
+                    row = await cursor.fetchone()
+                    return row[0] if row else 0
+        except Exception as e:
+            self.logger.error(f"Failed to get total chunks: {e}")
+            return 0
+
+    async def get_embedding_model_distribution(self) -> Dict[str, int]:
+        """Get distribution of embedding models used."""
+        try:
+            distribution = {}
+            async with aiosqlite.connect(self.db_path) as db:
+                async with db.execute(
+                    """
+                    SELECT embedding_model, COUNT(*) as count
+                    FROM documents
+                    WHERE embedding_model IS NOT NULL
+                    GROUP BY embedding_model
+                    """
+                ) as cursor:
+                    async for row in cursor:
+                        model, count = row
+                        distribution[model] = count
+            return distribution
+        except Exception as e:
+            self.logger.error(f"Failed to get embedding model distribution: {e}")
+            return {}

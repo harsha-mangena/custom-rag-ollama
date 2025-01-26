@@ -331,3 +331,48 @@
 2025-01-24 04:58:44,803 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'codellama' not found"}
 2025-01-24 04:58:44,804 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
 2025-01-24 04:58:44,805 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 07:23:00,831 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 07:23:00,833 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 07:23:02,469 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 07:23:02,473 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 07:23:02,473 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 07:23:03,797 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 07:23:03,799 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 07:23:03,799 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 07:23:04,715 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 07:23:04,818 - data.database - INFO - Database tables created successfully
+2025-01-24 07:23:04,818 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 07:24:04,081 - core.rag - INFO - Processed 20/20 chunks from EJ1172284.pdf
+2025-01-24 07:27:04,708 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 07:27:04,709 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 07:27:06,244 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 07:27:06,246 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 07:27:06,246 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 07:27:07,588 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 07:27:07,590 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 07:27:07,590 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 07:27:08,390 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 07:27:08,495 - data.database - INFO - Database tables created successfully
+2025-01-24 07:27:08,495 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 07:27:28,907 - core.rag - INFO - Processed 20/20 chunks from EJ1172284.pdf
+2025-01-24 07:34:02,987 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 07:34:02,988 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 07:34:02,989 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 07:34:02,990 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 07:34:02,992 - utils.ollama_utils - ERROR - Ollama API error: {"error":"model 'llama2' not found"}
+2025-01-24 07:34:02,993 - utils.metrics - ERROR - Failed to store benchmark result: Object of type float32 is not JSON serializable
+2025-01-24 07:41:24,741 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 07:41:24,742 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-24 07:41:26,092 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-24 07:41:26,095 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 07:41:26,095 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-24 07:41:27,805 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-24 07:41:27,807 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-24 07:41:27,807 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-24 07:41:28,757 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-24 07:41:28,860 - data.database - INFO - Database tables created successfully
+2025-01-24 07:41:28,861 - core.rag - INFO - RAG system initialized successfully
+2025-01-24 07:43:06,228 - core.rag - ERROR - Document processing failed for WhatsApp Image 2025-01-23 at 20.37.42.pdf: No content extracted from WhatsApp Image 2025-01-23 at 20.37.42.pdf
+2025-01-24 07:43:09,715 - core.rag - ERROR - Document processing failed for WhatsApp Image 2025-01-23 at 20.37.42.pdf: No content extracted from WhatsApp Image 2025-01-23 at 20.37.42.pdf
+2025-01-24 07:43:10,651 - core.rag - ERROR - Document processing failed for WhatsApp Image 2025-01-23 at 20.37.42.pdf: No content extracted from WhatsApp Image 2025-01-23 at 20.37.42.pdf
+2025-01-24 07:43:11,315 - core.rag - ERROR - Document processing failed for WhatsApp Image 2025-01-23 at 20.37.42.pdf: No content extracted from WhatsApp Image 2025-01-23 at 20.37.42.pdf

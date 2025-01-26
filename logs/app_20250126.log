@@ -1,0 +1,234 @@
+2025-01-26 10:17:40,088 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:17:40,089 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 10:17:41,512 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 10:17:41,514 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:17:41,514 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 10:17:42,794 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 10:17:42,796 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:17:42,796 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 10:17:43,696 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 10:17:43,803 - data.database - INFO - Database tables created successfully
+2025-01-26 10:17:43,803 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 10:17:56,428 - core.rag - ERROR - Failed to update mind map: 'DatabaseManager' object has no attribute 'get_all_documents'
+2025-01-26 10:17:56,428 - core.rag - ERROR - Document processing failed for EJ1172284.pdf: 'DatabaseManager' object has no attribute 'get_all_documents'
+2025-01-26 10:21:16,558 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:21:16,559 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 10:21:18,222 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 10:21:18,224 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:21:18,225 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 10:21:19,520 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 10:21:19,522 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:21:19,522 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 10:21:20,775 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 10:21:20,776 - data.database - INFO - Database tables created successfully
+2025-01-26 10:21:20,776 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 10:21:28,116 - core.rag - INFO - Mind map updated and saved to /Users/venom/Work/custom-rag-ollama/mindmaps/mind_map_20250126_102127.png
+2025-01-26 10:21:28,117 - core.rag - INFO - Processed 20/20 chunks from EJ1172284.pdf
+2025-01-26 10:30:15,397 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:30:15,397 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 10:30:17,594 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 10:30:17,597 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:30:17,597 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 10:30:18,968 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 10:30:18,971 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:30:18,971 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 10:30:19,955 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 10:30:22,738 - data.database - INFO - Database tables created successfully
+2025-01-26 10:30:22,738 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 10:30:55,610 - core.rag - INFO - Mind map updated and saved to /Users/venom/Work/custom-rag-ollama/mindmaps/mind_map_20250126_103055.png
+2025-01-26 10:30:55,611 - core.rag - INFO - Processed 20/20 chunks from EJ1172284.pdf
+2025-01-26 10:41:52,024 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:41:52,025 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 10:41:54,047 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 10:41:54,049 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:41:54,049 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 10:41:55,463 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 10:41:55,466 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:41:55,466 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 10:41:56,295 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 10:41:56,322 - data.database - INFO - Database tables created successfully
+2025-01-26 10:41:56,323 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 10:50:24,656 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:50:24,656 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 10:50:27,238 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 10:50:27,240 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:50:27,240 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 10:50:28,568 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 10:50:28,570 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:50:28,570 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 10:50:29,412 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 10:50:29,414 - data.database - INFO - Database tables created successfully
+2025-01-26 10:50:29,415 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 10:52:08,124 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:52:08,124 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 10:52:09,701 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 10:52:09,702 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:52:09,703 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 10:52:10,997 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 10:52:11,000 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:52:11,000 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 10:52:11,776 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 10:52:11,779 - data.database - INFO - Database tables created successfully
+2025-01-26 10:52:11,779 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 10:57:31,505 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:57:31,506 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 10:57:33,436 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 10:57:33,438 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:57:33,438 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 10:57:34,857 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 10:57:34,860 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 10:57:34,860 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 10:57:35,687 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 10:57:35,689 - data.database - INFO - Database tables created successfully
+2025-01-26 10:57:35,689 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:00:21,429 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:00:21,429 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:00:22,431 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:00:22,433 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:00:22,433 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:00:23,443 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:00:23,445 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:00:23,445 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:00:24,501 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:00:24,503 - data.database - INFO - Database tables created successfully
+2025-01-26 11:00:24,504 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:00:51,232 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:00:51,232 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:00:52,251 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:00:52,253 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:00:52,253 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:00:53,158 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:00:53,160 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:00:53,160 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:00:53,921 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:00:53,925 - data.database - INFO - Database tables created successfully
+2025-01-26 11:00:53,928 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:01:08,422 - utils.searx_utils - ERROR - Error performing SearXNG search: Cannot connect to host localhost:8888 ssl:default [Multiple exceptions: [Errno 61] Connect call failed ('::1', 8888, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 8888)]
+2025-01-26 11:01:08,422 - utils.ollama_utils - ERROR - Failed to generate response: Object of type function is not JSON serializable
+2025-01-26 11:01:23,652 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:01:23,653 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:01:25,933 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:01:25,936 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:01:25,936 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:01:27,027 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:01:27,029 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:01:27,029 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:01:27,916 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:01:27,917 - data.database - INFO - Database tables created successfully
+2025-01-26 11:01:27,917 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:02:00,138 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:02:00,139 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:02:01,081 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:02:01,083 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:02:01,083 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:02:02,060 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:02:02,062 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:02:02,062 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:02:03,241 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:02:03,244 - data.database - INFO - Database tables created successfully
+2025-01-26 11:02:03,245 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:02:18,610 - utils.searx_utils - ERROR - Error performing SearXNG search: Cannot connect to host localhost:8888 ssl:default [Multiple exceptions: [Errno 61] Connect call failed ('::1', 8888, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 8888)]
+2025-01-26 11:07:08,061 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:07:08,061 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:07:09,760 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:07:09,763 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:07:09,763 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:07:11,110 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:07:11,112 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:07:11,112 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:07:12,060 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:07:49,996 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:07:49,997 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:07:51,391 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:07:51,393 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:07:51,393 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:07:52,661 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:07:52,663 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:07:52,663 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:07:53,555 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:09:57,470 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:09:57,471 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:09:58,583 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:09:58,586 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:09:58,586 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:09:59,645 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:09:59,648 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:09:59,648 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:10:00,420 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:10:00,666 - data.database - INFO - Database tables created successfully
+2025-01-26 11:10:00,667 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:10:41,700 - utils.searx_utils - ERROR - Error performing SearXNG search: No available SearXNG instances
+2025-01-26 11:15:42,242 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:15:42,242 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:15:43,790 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:15:43,792 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:15:43,792 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:15:45,074 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:15:45,077 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:15:45,077 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:15:46,432 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:15:46,434 - data.database - INFO - Database tables created successfully
+2025-01-26 11:15:46,434 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:15:55,816 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=tell+me+about+ipl+2025&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 11:17:17,414 - core.rag - INFO - Mind map updated and saved to /Users/venom/Work/custom-rag-ollama/mindmaps/mind_map_20250126_111717.png
+2025-01-26 11:17:17,415 - core.rag - INFO - Processed 20/20 chunks from EJ1172284.pdf
+2025-01-26 11:17:28,645 - core.rag - ERROR - Query failed: free variable 'local_results' referenced before assignment in enclosing scope
+2025-01-26 11:18:08,352 - core.rag - ERROR - Query failed: free variable 'local_results' referenced before assignment in enclosing scope
+2025-01-26 11:18:10,751 - core.rag - ERROR - Query failed: free variable 'local_results' referenced before assignment in enclosing scope
+2025-01-26 11:21:11,874 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:21:11,874 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:21:13,304 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:21:13,306 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:21:13,306 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:21:18,332 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:21:18,335 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:21:18,335 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:21:19,166 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:21:19,268 - data.database - INFO - Database tables created successfully
+2025-01-26 11:21:19,268 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:21:30,597 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=tell+me+about+ces+2025+Q+English+The+JALT+CALL+Journal+I&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 11:24:42,227 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=tell+me+about+2025+year+till+now+news+Q+English+The+JALT+CALL+Journal+I&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 11:25:39,825 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:25:39,825 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:25:41,282 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:25:41,283 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:25:41,283 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:25:52,018 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:25:52,018 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:25:53,475 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:25:53,477 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:25:53,477 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:25:54,514 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:25:54,516 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:25:54,516 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:25:55,468 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:25:55,572 - data.database - INFO - Database tables created successfully
+2025-01-26 11:25:55,573 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:26:38,109 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:26:38,110 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:26:39,306 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:26:39,308 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:26:39,308 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:26:40,381 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:26:40,384 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:26:40,384 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:26:41,407 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:26:41,408 - data.database - INFO - Database tables created successfully
+2025-01-26 11:26:41,409 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:26:49,942 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:26:49,942 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-01-26 11:26:51,206 - core.embeddings - INFO - Loaded embedding model: bge-small
+2025-01-26 11:26:51,208 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:26:51,208 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-01-26 11:26:52,420 - core.embeddings - INFO - Loaded embedding model: bge-base
+2025-01-26 11:26:52,422 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-01-26 11:26:52,422 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-01-26 11:26:53,583 - core.embeddings - INFO - Loaded embedding model: minilm
+2025-01-26 11:26:53,584 - data.database - INFO - Database tables created successfully
+2025-01-26 11:26:53,584 - core.rag - INFO - RAG system initialized successfully
+2025-01-26 11:27:09,895 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=news+till+date+starting+2025&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 11:28:07,063 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=news+till+date+starting+jan+1st+2025+&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 11:33:40,980 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=news+till+date+starting+jan+1st+2025+&format=json&no_html=1&no_redirect=1&t=CustomRAG'
+2025-01-26 11:37:23,466 - core.rag - INFO - Mind map updated and saved to /Users/venom/Work/custom-rag-ollama/mindmaps/mind_map_20250126_113723.png
+2025-01-26 11:37:23,467 - core.rag - INFO - Processed 20/20 chunks from EJ1172284.pdf
+2025-01-26 11:37:36,162 - utils.search_utils - ERROR - Error performing web search: 200, message='Attempt to decode JSON with unexpected mimetype: application/x-javascript', url='https://api.duckduckgo.com/?q=explain+this+document+Knapp+Beyond+Mobile&format=json&no_html=1&no_redirect=1&t=CustomRAG'
