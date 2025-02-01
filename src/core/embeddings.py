@@ -57,8 +57,8 @@ class EmbeddingManager:
         response = requests.post(
             Settings.HF_API_URL,
             headers=headers,
-            json={"inputs": text}
-        )
+            json={"inputs": text}, 
+        timeout=60)
         
         if response.status_code == 200:
             return np.array(response.json()), 0.0  # TODO: Add timing
